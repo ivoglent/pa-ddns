@@ -1,0 +1,13 @@
+[Unit]
+Description=PA DDNS Service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+Group=nogroup
+ExecStart=/usr/bin/python3 /PATH_TO_REPO/pa-ddns/main.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
